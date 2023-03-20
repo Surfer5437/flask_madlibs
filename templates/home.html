@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block content %} 
+<p class="h1 text-center">Madlibs Home Page</p>
+  <form action="/story">
+    {% for prompt in prompts %}
+      <p>{{ prompt }}:
+        <input name="{{ prompt }}">
+      </p>
+    {% endfor %}
+    <button>Submit</button>
+  </form>
+
+{% endblock %}
